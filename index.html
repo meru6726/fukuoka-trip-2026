@@ -1,13 +1,237 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2026福岡之旅</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福岡 8 Days 雙人浪漫慢遊 🇯🇵</title>
+    <!-- Tailwind CSS (簡約優雅的 UI 框架) -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f7f5f0; /* 日系暖米色背景 */
+            color: #4a4643;
+        }
+        .active-tab {
+            background-color: #6e8b74 !important; /* 抹茶綠 active */
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="pb-12">
+
+    <!-- Header / 標題區 -->
+    <header class="bg-[#e8e2d5] text-[#3d3a37] py-6 px-4 shadow-sm text-center border-b border-[#d8d0c0]">
+        <span class="text-xs uppercase tracking-widest text-[#7a736c] font-medium">Fukuoka Trip 2026</span>
+        <h1 class="text-2xl font-bold mt-1 tracking-wide">福岡 8 Days 雙人浪漫慢遊 ✈️</h1>
+        <p class="text-xs text-[#6e6760] mt-2">2026/11/03 (二) － 11/10 (二) • 華航午去午回</p>
+    </header>
+
+    <div class="max-w-2xl mx-auto px-4 mt-4 space-y-4">
+
+        <!-- 搶票關鍵提醒卡片 -->
+        <div class="bg-[#f2e6d8] border-l-4 border-[#c87d55] p-4 rounded-r-lg shadow-sm">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl">⏰</span>
+                <h3 class="font-bold text-[#8c4e2b]">行事曆必記！觀光列車搶票提醒</h3>
+            </div>
+            <p class="text-sm mt-1 text-[#5c4738]">
+                <strong>由布院之森 (11/5 搭乘)</strong> ➔ <span class="text-red-700 font-bold">10 月 5 日（週一）09:00</span> 線上準時開搶！
+            </p>
+            <div class="mt-2 text-xs flex flex-wrap gap-2">
+                <a href="https://www.klook.com/zh-TW/blog/yufuin-no-mori/" target="_blank" class="text-[#8c4e2b] underline hover:text-black">📖 Klook 攻略指南</a>
+            </div>
+        </div>
+
+        <!-- 功能分頁切換：行程 / 備忘清單 / 預算 -->
+        <div class="flex border-b border-[#d8d0c0] text-sm font-medium text-center">
+            <button onclick="switchMainView('itinerary')" id="view-itinerary-btn" class="flex-1 py-2 border-b-2 border-[#6e8b74] text-[#6e8b74]">📅 每日行程</button>
+            <button onclick="switchMainView('checklist')" id="view-checklist-btn" class="flex-1 py-2 text-[#7a736c]">☑️ 準備清單</button>
+            <button onclick="switchMainView('budget')" id="view-budget-btn" class="flex-1 py-2 text-[#7a736c]">💰 預算表</button>
+        </div>
+
+        <!-- 區塊 1: 每日行程觀看區 -->
+        <main id="view-itinerary" class="space-y-4">
+            <!-- 天數橫向滾動頁籤 -->
+            <div class="flex space-x-2 overflow-x-auto pb-2 scrollbar-none">
+                <button onclick="showDay(1)" id="day-btn-1" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 1 (11/3)</button>
+                <button onclick="showDay(2)" id="day-btn-2" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 2 (11/4)</button>
+                <button onclick="showDay(3)" id="day-btn-3" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 3 (11/5)</button>
+                <button onclick="showDay(4)" id="day-btn-4" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 4 (11/6)</button>
+                <button onclick="showDay(5)" id="day-btn-5" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 5 (11/7)</button>
+                <button onclick="showDay(6)" id="day-btn-6" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 6 (11/8)</button>
+                <button onclick="showDay(7)" id="day-btn-7" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 7 (11/9)</button>
+                <button onclick="showDay(8)" id="day-btn-8" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 8 (11/10)</button>
+            </div>
+
+            <!-- 動態顯示的 Day 卡片 -->
+            <div id="day-content" class="bg-white p-5 rounded-xl shadow-sm border border-[#e8e2d5] space-y-4">
+                <!-- JS 會動態插入內容 -->
+            </div>
+        </main>
+
+        <!-- 區塊 2: 準備清單 -->
+        <section id="view-checklist" class="hidden space-y-4">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-[#e8e2d5]">
+                <h2 class="text-base font-bold mb-3 text-[#3d3a37]">🧳 出發前準備 Checklists</h2>
+                <div class="space-y-2 text-sm text-[#5c5650]">
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>台灣駕照正本（有效期限內）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>駕照日文譯本正本（監理所辦理 $100）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>護照正本（檢查效期 6 個月以上）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>主駕駛人實體信用卡（租車押金扣過）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>填寫 Visit Japan Web 入境手續</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>JR Pass 3 日券購買證明 / 電子票</span></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- 區塊 3: 預算表 -->
+        <section id="view-budget" class="hidden space-y-4">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-[#e8e2d5]">
+                <h2 class="text-base font-bold mb-3 text-[#3d3a37]">💰 雙人花費預估表 (TWD)</h2>
+                <div class="space-y-2 text-sm text-[#5c5650]">
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>中華航空雙人機票（午去午回）</span>
+                        <span class="font-semibold text-[#8c4e2b]">NT$ 30,000</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>住宿費用（博多/由布院/別府）</span>
+                        <span class="font-semibold">估算中</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>交通（JR Pass 3日券 + 西鐵/地鐵/巴士）</span>
+                        <span class="font-semibold">估算中</span>
+                    </div>
+                    <div class="mt-4 pt-2 border-t border-[#d8d0c0] flex justify-between font-bold text-base text-[#3d3a37]">
+                        <span>總預算預估</span>
+                        <span class="text-[#6e8b74]">約 NT$ 84,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript 行程資料與邏輯 -->
+    <script>
+        const itineraryData = {
+            1: {
+                date: '11/3 (二)',
+                title: '桃園機場 ➔ 福岡空港 ➔ 博多車站',
+                hotel: 'Cross Life Hakata Tenjin (博多車站周邊精緻商旅)',
+                highlight: '搭乘華航午去班機，傍晚順利抵達福岡。出關後搭地鐵 5 分鐘直達博多車站，去飯店 Check-in 完後，去博多車站頂樓「筑紫口居酒屋街」或中洲屋台大啖烤雞肉串與地酒！'
+            },
+            2: {
+                date: '11/4 (三)',
+                title: '太宰府天滿宮歷史散策 ➔ 天神/博多血拼',
+                hotel: 'Cross Life Hakata Tenjin (續住)',
+                highlight: '早上睡到自然醒。搭西鐵電車去太宰府天滿宮散策、朝聖隈研吾設計的木構星巴克、吃現烤梅枝餅。下午回到天神地下街或博多運河城買齊服飾與藥妝。'
+            },
+            3: {
+                date: '11/5 (四)',
+                title: '博多 ➔ 夢幻「由布院之森」 ➔ 童話由布院',
+                hotel: '由布院 我回家了民宿 (一泊二食頂級溫泉旅館)',
+                highlight: '09:17 從博多站搭乘【由布院之森 1號】(Klook NT 2,826 刷中油卡)。車上享用限定便當，直達由布院。下午輕裝逛湯之坪街道，黃昏在金鱗湖欣賞絕美夕陽。'
+            },
+            4: {
+                date: '11/6 (五)',
+                title: '由布院晨霧 ➔ 由布岳 ➔ 溫泉之鄉【別府】',
+                hotel: 'AMANEK 別府溫泉♨️ (JR Pass Day 1)',
+                highlight: '清晨去金鱗湖看仙境晨霧。退房後搭巴士前往由布岳登山口散步。隨後搭火車前往別府，體驗古老「竹瓦溫泉」砂浴，或在別府海濱公園散步。',
+                links: [
+                    { name: '由布岳登山攻略 01', url: 'https://journey.tw/yufudake/' },
+                    { name: '由布岳旅遊情報 02', url: 'https://locally.matcha-jp.com/tw/26970' }
+                ]
+            },
+            5: {
+                date: '11/7 (六)',
+                title: '別府地獄熱氣巡禮 ➔ 搭「音速號」返回福岡',
+                hotel: 'Via Inn Hotel (博多車站周邊)',
+                highlight: ' (JR Pass Day 2) 上午搭巴士巡禮別府地獄（海地獄、血池地獄），品嚐地獄蒸料理；或選擇別府站租車前往志高湖（車程約30分）。下午搭乘特急 Sonic 號（音速號）返回博多。',
+                note: '租車注意事項：須帶台灣駕照正本 + 日文譯本 + 護照正本 + 主駕駛人實體信用卡。'
+            },
+            6: {
+                date: '11/8 (日)',
+                title: '糸島自然海岸慢遊 / 龍貓森林',
+                hotel: 'Via Inn Hotel (續住)',
+                highlight: '(JR Pass Day 3) 從博多/天神搭機場線直通 JR 筑肥線至「筑前前原站」。下車補地鐵段車資 ¥300。轉乘昭和巴士「芥屋線」至終點站「芥屋」，步行至芥屋大門公園與龍貓森林。',
+                links: [
+                    { name: '糸島交通詳細指南', url: 'https://matcha-jp.com/tw/6110' }
+                ]
+            },
+            7: {
+                date: '11/9 (一)',
+                title: 'LaLaport 鋼彈 ➔ 大濠公園 ➔ 櫛田神社',
+                hotel: 'Via Inn Hotel (續住)',
+                highlight: '上午搭公車至 LaLaport 與 1:1 鋼彈合影。下午去文青感十足的大濠公園喝下午茶。傍晚至「櫛田神社」參拜，晚上安排博多牛腸鍋（もつ鍋）慶祝浪漫倒數。'
+            },
+            8: {
+                date: '11/10 (二)',
+                title: '福岡 ➔ 福岡空港免稅店 ➔ 桃園機場',
+                hotel: '溫馨的家 🏠',
+                highlight: '悠閒吃完早餐退房，搭地鐵 5 分鐘直達機場國內線轉接駁車至國際線。在免稅店採買長崎蛋糕、明太子、一蘭拉麵包後愉快搭機返台！'
+            }
+        };
+
+        function showDay(dayNumber) {
+            // 切換 Active 頁籤樣式
+            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active-tab'));
+            document.getElementById(`day-btn-${dayNumber}`).classList.add('active-tab');
+
+            const data = itineraryData[dayNumber];
+            let linksHtml = '';
+            if (data.links && data.links.length > 0) {
+                linksHtml = `<div class="mt-3 pt-3 border-t border-gray-100 text-xs">
+                    <span class="font-semibold text-gray-500">🔗 實用參考連結：</span>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        ${data.links.map(l => `<a href="${l.url}" target="_blank" class="text-[#6e8b74] underline">${l.name}</a>`).join('')}
+                    </div>
+                </div>`;
+            }
+
+            let noteHtml = '';
+            if (data.note) {
+                noteHtml = `<div class="mt-2 text-xs bg-[#f7f5f0] p-2 rounded text-[#7a736c] border border-[#e8e2d5]">💡 ${data.note}</div>`;
+            }
+
+            const html = `
+                <div class="flex justify-between items-start border-b border-[#f2e6d8] pb-2">
+                    <div>
+                        <span class="text-xs font-bold text-[#6e8b74] bg-[#eef2ee] px-2 py-0.5 rounded">Day ${dayNumber}</span>
+                        <h2 class="text-lg font-bold text-[#3d3a37] mt-1">${data.title}</h2>
+                        <p class="text-xs text-gray-400">${data.date}</p>
+                    </div>
+                </div>
+                <div class="text-sm text-[#5c5650] leading-relaxed">
+                    <p>${data.highlight}</p>
+                    ${noteHtml}
+                    ${linksHtml}
+                </div>
+                <div class="bg-[#f7f5f0] p-3 rounded-lg text-xs text-[#6e6760] flex items-center space-x-2 border border-[#e8e2d5]">
+                    <span>🏨 預計住宿：</span>
+                    <span class="font-medium text-[#3d3a37]">${data.hotel}</span>
+                </div>
+            `;
+
+            document.getElementById('day-content').innerHTML = html;
+        }
+
+        function switchMainView(viewName) {
+            ['itinerary', 'checklist', 'budget'].forEach(v => {
+                document.getElementById(`view-${v}`).classList.add('hidden');
+                document.getElementById(`view-${v}-btn`).classList.remove('border-b-2', 'border-[#6e8b74]', 'text-[#6e8b74]');
+                document.getElementById(`view-${v}-btn`).classList.add('text-[#7a736c]');
+            });
+
+            document.getElementById(`view-${viewName}`).classList.remove('hidden');
+            document.getElementById(`view-${viewName}-btn`).classList.add('border-b-2', 'border-[#6e8b74]', 'text-[#6e8b74]');
+            document.getElementById(`view-${viewName}-btn`).classList.remove('text-[#7a736c]');
+        }
+
+        // 預設載入 Day 1
+        showDay(1);
+    </script>
+</body>
 </html>
