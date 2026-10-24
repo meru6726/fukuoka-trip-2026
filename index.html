@@ -31,84 +31,6 @@
 
     <div class="max-w-2xl mx-auto px-4 mt-4 space-y-4">
 
-        <!-- 手繪風格 Day 1-8 模擬路線簡圖卡片 -->
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e8e2d5] space-y-2">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-                <span class="font-bold text-[#3d3a37] text-sm">🗺️ 九州 8 天慢遊路線示意圖</span>
-                <span class="text-xs text-[#7a736c] font-medium">博多 ➔ 由布院 ➔ 別府 ➔ 門司港 ➔ 高千穗</span>
-            </div>
-            
-            <!-- SVG 手繪路線繪製區 -->
-            <div class="bg-[#faf8f5] p-2 rounded-lg border border-[#eee8dd] flex justify-center">
-                <svg viewBox="0 0 500 360" class="w-full h-auto max-w-lg" style="font-family: 'Noto Sans TC', sans-serif;">
-                    <!-- 背景地圖輪廓風格塗鴉 -->
-                    <path d="M 30,120 Q 80,40 220,30 Q 380,20 460,90 Q 480,200 420,310 Q 250,350 100,320 Q 20,250 30,120 Z" fill="#f2efe9" stroke="#e0d7c6" stroke-width="2" stroke-dasharray="6,6" />
-                    <text x="380" y="330" font-size="12" fill="#b5ac9e" font-weight="bold">KYUSHU</text>
-
-                    <!-- 連接路線軌跡 (虛線手繪感) -->
-                    <!-- D1-D3 博多 -> 由布院 -->
-                    <path d="M 120,130 C 160,130 190,160 220,180" fill="none" stroke="#6e8b74" stroke-width="3" stroke-dasharray="5,4" />
-                    <!-- D4 由布院 -> 別府 -->
-                    <path d="M 220,180 Q 260,170 300,160" fill="none" stroke="#6e8b74" stroke-width="3" stroke-dasharray="5,4" />
-                    <!-- D5 別府 -> 門司港 -->
-                    <path d="M 300,160 C 330,110 320,60 280,50" fill="none" stroke="#6e8b74" stroke-width="3" stroke-dasharray="5,4" />
-                    <!-- D5 門司港 -> 博多 -->
-                    <path d="M 280,50 C 200,50 150,90 120,130" fill="none" stroke="#6e8b74" stroke-width="3" stroke-dasharray="5,4" />
-                    <!-- D6 博多 -> 高千穗 (往南往返) -->
-                    <path d="M 120,130 Q 150,230 200,280" fill="none" stroke="#c87d55" stroke-width="2.5" stroke-dasharray="4,3" />
-
-                    <!-- 站點標記與圖示 -->
-
-                    <!-- 1. 博多/天神 (起點&據點) -->
-                    <g transform="translate(120,130)">
-                        <circle r="14" fill="#6e8b74" />
-                        <circle r="18" fill="none" stroke="#6e8b74" stroke-width="1.5" stroke-dasharray="3,2" />
-                        <text x="0" y="4" font-size="11" fill="white" text-anchor="middle" font-weight="bold">博多</text>
-                        <text x="-35" y="-20" font-size="10" fill="#3d3a37" font-weight="bold">Day 1-2, 5-8 福岡/天神</text>
-                        <text x="-35" y="-8" font-size="9" fill="#8c4e2b">🛍️ 鋼彈/聖誕市集/爵士</text>
-                    </g>
-
-                    <!-- 2. 由布院 -->
-                    <g transform="translate(220,180)">
-                        <circle r="12" fill="#8c4e2b" />
-                        <text x="0" y="4" font-size="10" fill="white" text-anchor="middle" font-weight="bold">由布</text>
-                        <text x="18" y="0" font-size="10" fill="#3d3a37" font-weight="bold">Day 3-4 由布院</text>
-                        <text x="18" y="12" font-size="9" fill="#6e6760">♨️ 金鱗湖/溫泉朝食</text>
-                    </g>
-
-                    <!-- 3. 別府 -->
-                    <g transform="translate(300,160)">
-                        <circle r="12" fill="#8c4e2b" />
-                        <text x="0" y="4" font-size="10" fill="white" text-anchor="middle" font-weight="bold">別府</text>
-                        <text x="16" y="-6" font-size="10" fill="#3d3a37" font-weight="bold">Day 4-5 別府</text>
-                        <text x="16" y="6" font-size="9" fill="#6e6760">🚡 纜車/地獄巡禮</text>
-                    </g>
-
-                    <!-- 4. 門司港 -->
-                    <g transform="translate(280,50)">
-                        <circle r="11" fill="#5c82a6" />
-                        <text x="0" y="4" font-size="9" fill="white" text-anchor="middle" font-weight="bold">門司</text>
-                        <text x="16" y="-2" font-size="10" fill="#3d3a37" font-weight="bold">Day 5 門司港</text>
-                        <text x="16" y="10" font-size="9" fill="#6e6760">🍛 懷舊建築/燒咖哩</text>
-                    </g>
-
-                    <!-- 5. 高千穗峽 -->
-                    <g transform="translate(200,280)">
-                        <circle r="11" fill="#c87d55" />
-                        <text x="0" y="4" font-size="9" fill="white" text-anchor="middle" font-weight="bold">高千</text>
-                        <text x="16" y="2" font-size="10" fill="#3d3a37" font-weight="bold">Day 6 高千穗峽一日遊</text>
-                        <text x="16" y="14" font-size="9" fill="#8c4e2b">🚣 瀑布划船/神社</text>
-                    </g>
-
-                    <!-- 小圖示點綴 -->
-                    <text x="150" y="145" font-size="12">🚆</text> <!-- 由布院之森 -->
-                    <text x="250" y="165" font-size="11">🚌</text> <!-- 龜之井巴士 -->
-                    <text x="150" y="220" font-size="11">🚌</text> <!-- 高千穗一日遊專車 -->
-                </svg>
-            </div>
-            <p class="text-[11px] text-[#7a736c] text-center italic">點擊下方「📅 行程」或「🗺️ 地圖」可切換詳細景點與 Google Maps 導航！</p>
-        </div>
-
         <!-- 機票資訊卡片 -->
         <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e8e2d5] space-y-2 text-xs text-[#5c5650]">
             <div class="flex justify-between items-center border-b border-gray-100 pb-2">
@@ -118,11 +40,11 @@
             <div class="grid grid-cols-2 gap-2 pt-1">
                 <div>
                     <p class="font-semibold text-[#8c4e2b]">去程 CI128 (11/03 二)</p>
-                    <p>14:15 桃園 (T2) ➔ 17:30 福岡 (T1)</p>
+                    <p>14:15 桃園 (T2) ➔ 17:30 福岡 (國際線)</p>
                 </div>
                 <div>
                     <p class="font-semibold text-[#8c4e2b]">回程 CI111 (11/10 二)</p>
-                    <p>11:00 福岡 (T1) ➔ 12:35 桃園 (T2)</p>
+                    <p>11:00 福岡 (國際線) ➔ 12:35 桃園 (T2)</p>
                 </div>
             </div>
         </div>
@@ -137,18 +59,17 @@
                 <strong>高千穗峽免費取消截止</strong>：<span class="text-red-700 font-bold">11 月 4 日（週三）23:59 前</span>（出發前 4 天），請務必看天氣預報決定是否保留訂單。
             </p>
             <p class="text-xs text-[#5c5650]">
-                <strong>觀光列車搶票</strong>：由布院之森 (11/5 搭乘) ➔ <span class="text-red-700 font-bold">10 月 5 日（週一）09:00</span> 線上搶票（優先選第 1/4 車廂靠窗）！
+                <strong>由布院之森車票</strong>：已透過 KKday 訂妥 11/5 由布院之森，請於出發前確認電子憑證。
             </p>
             <p class="text-xs text-[#5c5650]">
-                <strong>回程機場退稅與登機</strong>：11/10 班機為 11:00 起飛，請務必<span class="text-red-700 font-bold">提早至 08:00 前抵達福岡機場</span>辦理退稅與出關手續！
+                <strong>回程機場退稅與登機</strong>：11/10 班機為 11:00 起飛，請務必<span class="text-red-700 font-bold">提早至 08:00 前抵達福岡機場「國際線航廈」</span>辦理退稅與出關手續！
             </p>
             <div class="pt-1 text-xs flex flex-wrap gap-2">
-                <a href="https://www.klook.com/zh-TW/blog/yufuin-no-mori/" target="_blank" class="text-[#8c4e2b] underline hover:text-black">📖 Klook 由布院之森攻略</a>
                 <a href="https://kamenoibus.com/guruspa/hp/yufurin/yufurin_jikoku.pdf" target="_blank" class="text-[#8c4e2b] underline hover:text-black">🚌 龜之井 Yufurin / 36號 巴士時刻表 (PDF)</a>
             </div>
         </div>
 
-        <!-- 功能分頁切換：行程 / 地圖 / 準備清單 / 貼心秘訣 / 預算 -->
+        <!-- 功能分頁切換 -->
         <div class="flex border-b border-[#d8d0c0] text-sm font-medium text-center">
             <button onclick="switchMainView('itinerary')" id="view-itinerary-btn" class="flex-1 py-2 border-b-2 border-[#6e8b74] text-[#6e8b74]">📅 行程</button>
             <button onclick="switchMainView('map')" id="view-map-btn" class="flex-1 py-2 text-[#7a736c]">🗺️ 地圖</button>
@@ -159,16 +80,16 @@
 
         <!-- 區塊 1: 每日行程觀看區 -->
         <main id="view-itinerary" class="space-y-4">
-            <!-- 天數橫向滾動頁籤 -->
+            <!-- 天數橫向滾動頁籤（星期全線正確對齊） -->
             <div class="flex space-x-2 overflow-x-auto pb-2 scrollbar-none">
-                <button onclick="showDay(1)" id="day-btn-1" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 1 (11/3)</button>
-                <button onclick="showDay(2)" id="day-btn-2" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 2 (11/4)</button>
-                <button onclick="showDay(3)" id="day-btn-3" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 3 (11/5)</button>
-                <button onclick="showDay(4)" id="day-btn-4" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 4 (11/6)</button>
-                <button onclick="showDay(5)" id="day-btn-5" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 5 (11/7)</button>
-                <button onclick="showDay(6)" id="day-btn-6" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 6 (11/8)</button>
-                <button onclick="showDay(7)" id="day-btn-7" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 7 (11/9)</button>
-                <button onclick="showDay(8)" id="day-btn-8" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 8 (11/10)</button>
+                <button onclick="showDay(1)" id="day-btn-1" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 1 (11/3 二)</button>
+                <button onclick="showDay(2)" id="day-btn-2" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 2 (11/4 三)</button>
+                <button onclick="showDay(3)" id="day-btn-3" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 3 (11/5 四)</button>
+                <button onclick="showDay(4)" id="day-btn-4" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 4 (11/6 五)</button>
+                <button onclick="showDay(5)" id="day-btn-5" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 5 (11/7 六)</button>
+                <button onclick="showDay(6)" id="day-btn-6" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 6 (11/8 日)</button>
+                <button onclick="showDay(7)" id="day-btn-7" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 7 (11/9 一)</button>
+                <button onclick="showDay(8)" id="day-btn-8" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 8 (11/10 二)</button>
             </div>
 
             <!-- 動態顯示的 Day 卡片 -->
@@ -213,8 +134,12 @@
                 <h2 class="text-base font-bold mb-3 text-[#3d3a37]">🧳 出發前準備 Checklists</h2>
                 <div class="space-y-2 text-sm text-[#5c5650]">
                     <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>護照正本（效期 6 個月以上）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>帶朱印帳（御朱印帳）前往寺廟/神社</span></label>
                     <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]" checked> <span>已預訂 KKday 高千穗峽一日遊 (含划船雙人，已付 NT$ 3,988)</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]" checked> <span>Day 3 早上請 Cross Life 協助將大行李黑貓宅急便至 Via Inn 博多口</span></label>
                     <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>11/4 傍晚觀察高千穗氣象（若大雨需在 11/4 23:59 前免費取消）</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>Day 1 至 JR 博多站綠色窗口購買 JR Pass 實體票與憑 QR Code 取由布院之森車票</span></label>
+                    <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-[#6e8b74]"> <span>填寫 Visit Japan Web 入境與海關申報</span></label>
                 </div>
             </div>
         </section>
@@ -224,8 +149,12 @@
             <div class="bg-white p-5 rounded-xl shadow-sm border border-[#e8e2d5] space-y-3">
                 <h2 class="text-base font-bold text-[#3d3a37]">✨ 優化慢遊體驗的小秘訣</h2>
                 <div class="p-3 bg-[#f7f5f0] rounded-lg text-xs space-y-1">
-                    <p class="font-bold text-[#8c4e2b]">📍 高千穗一日遊集合資訊</p>
-                    <p class="text-[#6e6760]">07:50 集合（08:00 發車）於博多站築紫口（福岡東方飯店旁）。</p>
+                    <p class="font-bold text-[#8c4e2b]">📍 11/8 (日) 高千穗一日遊集合資訊</p>
+                    <p class="text-[#6e6760]"><b>集合時間：07:50</b>（08:00 發車）<br><b>集合地點：</b>博多站築紫口（福岡東方飯店旁）</p>
+                </div>
+                <div class="p-3 bg-[#f7f5f0] rounded-lg text-xs space-y-1">
+                    <p class="font-bold text-[#8c4e2b]">🚢 門司港輕鬆一日遊 (Day 7 週一)</p>
+                    <p class="text-[#6e6760]">從博多搭特急 Sonic 音速號前往門司港（約 50 分鐘），品嚐名物燒咖哩與漫步懷舊區，下午返回博多逛聖誕市集最順路！</p>
                 </div>
             </div>
         </section>
@@ -252,52 +181,56 @@
                 date: '11/3 (二)',
                 title: '桃園機場 ➔ 福岡空港 ➔ 博多 Check-in ➔ 筑紫口居酒屋街',
                 hotel: 'Cross Life 博多天神 (Check-in 15:00 / JPY 34,950 兩晚)',
-                highlight: '<b>14:15</b> 桃園 T2 飛赴福岡 ➔ <b>17:30</b> 抵達福岡 T1 ➔ <b>18:30</b> 搭地鐵直達飯店 Check-in ➔ <b>19:30</b> 漫步至博多車站頂樓「筑紫口居酒屋街」或中洲屋台大啖烤雞肉串與地酒！',
-                note: '第一天抵達後可在 JR 博多站綠色窗口購買 Pass 實體票與憑 Klook QR Code 取由布院之森車票。'
+                highlight: '<b>14:15</b> 桃園 T2 飛赴福岡 ➔ <b>17:30</b> 抵達福岡國際線 ➔ <b>18:30</b> 搭地鐵直達飯店 Check-in ➔ <b>19:30</b> 漫步至博多車站頂樓「筑紫口居酒屋街」或中洲屋台大啖烤雞肉串與地酒！',
+                note: '第一天抵達後可在 JR 博多站綠色窗口購買 Pass 實體票與取由布院之森車票。'
             },
             2: {
                 date: '11/4 (三)',
                 title: 'LaLaport 鋼彈 ➔ 太宰府天滿宮 (御朱印) ➔ 博多運河城 ➔ 天神購物',
                 hotel: 'Cross Life 博多天神 (續住)',
                 highlight: '<b>09:30</b> 搭乘公車或 JR 前往 <b>LaLaport 福岡</b>，朝聖 1:1 巨型動態鋼彈立像與逛 Gundam Park ➔ <b>12:30</b> 前往太宰府天滿宮參拜與蓋御朱印 ➔ <b>15:30</b> 博多運河城欣賞水舞 ➔ <b>18:00</b> 天神商圈血拼。',
-                note: '⚠️ 今日為 KKday 高千穗免費取消最後期限（23:59 前）！'
+                note: '⚠️ 今日為 KKday 高千穗免費取消最後期限（23:59 前），請務必確認天氣！'
             },
             3: {
                 date: '11/5 (四)',
                 title: '博多 ➔ 夢幻「由布院之森」 ➔ 湯之坪街道 ➔ 金鱗湖夕陽',
                 hotel: 'Yufuin Ryokan Okaeri (我回家了民宿 / 含日式榻榻米與朝食)',
-                highlight: '<b>08:30</b> Cross Life 退房（黑貓宅急便將大行李箱寄至 Day 5 Via Inn）➔ <b>09:17</b> 搭乘【由布院之森 1號】➔ <b>12:00</b> 湯之坪街道 ➔ <b>16:30</b> 金鱗湖夕陽 ➔ <b>18:30</b> 豐後牛晚餐與泡湯。',
-                note: '輕裝出發！大行李箱已直送福岡 Via Inn。'
+                highlight: '<b>08:30</b> Cross Life 退房（★請櫃檯協助辦理黑貓宅急便將大行李直送 Day 5 Via Inn）➔ <b>09:17</b> 搭乘【由布院之森 1號】➔ <b>12:00</b> 湯之坪街道 ➔ <b>16:30</b> 金鱗湖夕陽 ➔ <b>18:30</b> 豐後牛晚餐與泡湯。',
+                note: '輕裝出發！大行李箱已透過黑貓寄至博多 Via Inn。'
             },
             4: {
                 date: '11/6 (五)',
                 title: '金鱗湖晨霧 ➔ 別府纜車/由布岳 ➔ 別府竹瓦溫泉',
                 hotel: 'AMANEK 別府 YURA-RE 溫泉♨️ (Check-in 15:00 / USD 192.69)',
-                highlight: '<b>06:30</b> 金鱗湖晨霧 ➔ <b>10:00</b> 搭龜之井巴士至別府空中纜車俯瞰別府灣 ➔ <b>15:00</b> AMANEK Check-in ➔ <b>16:00</b> 竹瓦溫泉砂浴體驗。'
+                highlight: '<b>06:30</b> 金鱗湖晨霧與享用日式朝食 ➔ <b>10:00</b> 搭龜之井巴士至別府空中纜車俯瞰別府灣 ➔ <b>15:00</b> AMANEK Check-in ➔ <b>16:00</b> 竹瓦溫泉砂浴體驗。'
             },
             5: {
                 date: '11/7 (六)',
-                title: '別府地獄 ➔ 特急 Sonic ➔ 門司港懷舊散策 (燒咖哩) ➔ 回博多輕鬆休息',
-                hotel: 'Via Inn 博多口站前 (USD 445.9 3晚)',
-                highlight: '<b>08:30</b> 別府地獄巡禮 ➔ <b>11:50</b> 搭 Sonic 號經小倉轉車至門司港品嚐燒咖哩與欣賞關門海峽日落 ➔ <b>18:30</b> 返抵博多 Via Inn Check-in 領大行李！'
+                title: '別府地獄巡禮 ➔ 特急 Sonic ➔ 返回博多 Via Inn 輕鬆放鬆與購物',
+                hotel: 'Via Inn 博多口站前 (USD 445.9 三晚)',
+                highlight: '<b>08:30</b> 別府地獄巡禮（海地獄）➔ <b>11:50</b> 持 JR Pass 搭乘特急 Sonic 號返回博多（約 2 小時）➔ <b>14:30</b> Via Inn 博多口站前 Check-in 領取已送達的大行李箱 ➔ <b>16:00</b> 於博多站周邊與 KITTE 輕鬆逛街晚餐，好好養精蓄銳！',
+                note: '週六下午輕鬆返回博多，隔天週日早起參加高千穗一日遊。'
             },
             6: {
                 date: '11/8 (日)',
-                title: 'KKday 阿蘇山&草千里&高千穗峽谷一日遊 (含划船)',
+                title: 'KKday 阿蘇山 & 高千穗峽谷一日遊 (含划船)',
                 hotel: 'Via Inn 博多口站前 (續住)',
-                highlight: '<b>07:50 集合（08:00 發車）</b>：博多站築紫口搭專車前往阿蘇山、草千里與 <b>高千穗峽</b> 划船、漫步真名井瀑布與天岩戶神社 ➔ <b>18:00</b> 返回博多。'
+                highlight: '<b>07:50 集合（08:00 發車）</b>：博多站築紫口（福岡東方飯店旁）搭專車前往阿蘇山、草千里與 <b>高千穗峽</b> 划船、漫步真名井瀑布與天岩戶神社 ➔ <b>18:00</b> 返回博多車站。',
+                note: '已預訂【株式会社 JRT GROUP】高千穗一日遊（含划船）。'
             },
             7: {
                 date: '11/9 (一)',
-                title: '舞鶴公園 ➔ Fuglen Cafe ➔ 櫛田神社 ➔ 浪漫耶誕市集 ➔ 爵士酒吧 Live',
+                title: '門司港懷舊一日遊 (燒咖哩) ➔ 浪漫耶誕市集 ➔ 爵士酒吧 Live',
                 hotel: 'Via Inn 博多口站前 (續住)',
-                highlight: '<b>10:00</b> 舞鶴公園散步 ➔ <b>14:30</b> Fuglen Fukuoka 咖啡 ➔ <b>17:30</b> 福岡耶誕市集看燈飾 ➔ <b>21:00</b> Jazz & Cafe Backstage 爵士夜！'
+                highlight: '<b>09:00</b> 從博多搭乘特急 Sonic 號至小倉轉車至門司港（約 50 分鐘）➔ <b>10:15</b> 門司港懷舊散策、藍翼橋、品嚐名物<b>燒咖哩</b> ➔ <b>14:30</b> 搭車返回博多 ➔ <b>17:30</b> 漫步至 **福岡耶誕市集**（週一傍晚人潮舒適，享用熱紅酒）➔ <b>21:00</b> 赤坂站 <b>Jazz & Cafe Backstage</b> 享受頂級 Live 爵士夜！',
+                note: '週一進行門司港快閃日歸小旅行，動線完美又順路！'
             },
             8: {
                 date: '11/10 (二)',
-                title: '退房 ➔ 福岡空港 ➔ 桃園機場 (CI111 班機 11:00 起飛)',
+                title: '退房 ➔ 福岡機場國際線 ➔ 桃園機場 (CI111 班機 11:00 起飛)',
                 hotel: '溫馨的家 🏠',
-                highlight: '<b>07:30</b> 退房 ➔ <b>08:00</b> 抵達福岡機場辦理退稅與免稅店購物 ➔ <b>11:00</b> CI111 班機返台！'
+                highlight: '<b>07:30</b> 退房 ➔ <b>08:00</b> 抵達福岡機場「國際線航廈」辦理退稅與免稅店購物 ➔ <b>11:00</b> 搭乘華航 CI111 班機返台！',
+                note: '班機 11:00 起飛，務必於 08:00 前抵達國際線航廈。'
             }
         };
 
