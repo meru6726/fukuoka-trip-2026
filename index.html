@@ -75,12 +75,12 @@
             <button onclick="switchMainView('map')" id="view-map-btn" class="flex-1 py-2 text-[#7a736c]">🗺️ 地圖</button>
             <button onclick="switchMainView('checklist')" id="view-checklist-btn" class="flex-1 py-2 text-[#7a736c]">☑️ 清單</button>
             <button onclick="switchMainView('tips')" id="view-tips-btn" class="flex-1 py-2 text-[#7a736c]">💡 秘訣</button>
-            <button onclick="switchMainView('budget')" id="view-budget-btn" class="flex-1 py-2 text-[#7a736c]">💰 預算</button>
+            <button onclick="switchMainView('budget')" id="view-budget-btn" class="flex-1 py-2 text-[#7a736c]">💰 預算記帳</button>
         </div>
 
         <!-- 區塊 1: 每日行程觀看區 -->
         <main id="view-itinerary" class="space-y-4">
-            <!-- 天數橫向滾動頁籤（星期全線正確對齊） -->
+            <!-- 天數橫向滾動頁籤 -->
             <div class="flex space-x-2 overflow-x-auto pb-2 scrollbar-none">
                 <button onclick="showDay(1)" id="day-btn-1" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 1 (11/3 二)</button>
                 <button onclick="showDay(2)" id="day-btn-2" class="day-btn px-4 py-2 rounded-full text-xs bg-white text-[#5c5650] border border-[#d8d0c0] whitespace-nowrap shadow-sm">Day 2 (11/4 三)</button>
@@ -150,7 +150,7 @@
                 <h2 class="text-base font-bold text-[#3d3a37]">✨ 優化慢遊體驗的小秘訣</h2>
                 <div class="p-3 bg-[#f7f5f0] rounded-lg text-xs space-y-1">
                     <p class="font-bold text-[#8c4e2b]">📍 11/8 (日) 高千穗一日遊集合資訊</p>
-                    <p class="text-[#6e6760]"><b>集合時間：07:50</b>（08:00 發車）<br><b>集合地點：</b>博多站築紫口（福岡東方飯店旁）</p>
+                    <p class="text-[#6e6760]"><b>集合時間：07:50</b>（08:00 發車）<br><b>集合地點：</b>博多站築紫口（福岡東方飯店旁，4-23 Hakataekichūōgai）</p>
                 </div>
                 <div class="p-3 bg-[#f7f5f0] rounded-lg text-xs space-y-1">
                     <p class="font-bold text-[#8c4e2b]">🚢 門司港輕鬆一日遊 (Day 7 週一)</p>
@@ -159,14 +159,71 @@
             </div>
         </section>
 
-        <!-- 區塊 5: 預算 -->
+        <!-- 區塊 5: 預算與詳細記帳清單 -->
         <section id="view-budget" class="hidden space-y-4">
             <div class="bg-white p-5 rounded-xl shadow-sm border border-[#e8e2d5]">
                 <h2 class="text-base font-bold mb-3 text-[#3d3a37]">💰 雙人花費預估與實記明細 (TWD)</h2>
-                <div class="space-y-2 text-sm text-[#5c5650]">
+                <div class="space-y-3 text-sm text-[#5c5650]">
+                    <!-- 大項預算 -->
                     <div class="flex justify-between py-1 border-b border-gray-100">
-                        <span>總花費已確定預算</span>
-                        <span class="font-bold text-[#6e8b74]">約 NT$ 76,152</span>
+                        <span>✈️ 中華航空雙人機票（CI128/CI111）</span>
+                        <span class="font-semibold text-[#8c4e2b]">NT$ 30,000</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>🚆 由布院之森車票 (Klook 中油卡)</span>
+                        <span class="font-semibold">NT$ 2,826</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>🚣 KKday 阿蘇山&高千穗峽一日遊 (含划船雙人)</span>
+                        <span class="font-semibold text-[#8c4e2b]">NT$ 3,988</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span>🎫 JR Pass 3日券 + 西鐵/地鐵/市區公車</span>
+                        <span class="font-semibold">約 NT$ 6,000</span>
+                    </div>
+
+                    <!-- 住宿詳細記帳明細 -->
+                    <div class="pt-2">
+                        <p class="font-bold text-[#3d3a37] mb-2 flex justify-between items-center">
+                            <span>🏨 住宿詳細記帳（7 晚）：</span>
+                            <span class="text-xs font-normal text-gray-500">已訂妥</span>
+                        </p>
+                        <div class="pl-2 space-y-2 text-xs text-gray-600 border-l-2 border-[#6e8b74]">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium text-[#3d3a37]">Cross Life 博多天神 (11/3–11/5, 2晚)</p>
+                                    <p class="text-[11px] text-gray-400">JPY 34,950</p>
+                                </div>
+                                <span class="font-semibold text-[#8c4e2b]">約 NT$ 7,340</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium text-[#3d3a37]">由布院 Yufuin Ryokan Okaeri (11/5–11/6, 1晚)</p>
+                                    <p class="text-[11px] text-gray-400">榻榻米朝食 / 溫泉</p>
+                                </div>
+                                <span class="font-semibold text-[#8c4e2b]">NT$ 5,563</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium text-[#3d3a37]">AMANEK 別府 YURA-RE (11/6–11/7, 1晚)</p>
+                                    <p class="text-[11px] text-gray-400">USD 192.69</p>
+                                </div>
+                                <span class="font-semibold text-[#8c4e2b]">約 NT$ 6,166</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium text-[#3d3a37]">Via Inn 博多口站前 (11/7–11/10, 3晚)</p>
+                                    <p class="text-[11px] text-gray-400">USD 445.90</p>
+                                </div>
+                                <span class="font-semibold text-[#8c4e2b]">約 NT$ 14,269</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 總結預算 -->
+                    <div class="mt-4 pt-3 border-t border-[#d8d0c0] flex justify-between items-center font-bold text-base text-[#3d3a37]">
+                        <span>已確定開銷總預算</span>
+                        <span class="text-[#6e8b74] text-lg">NT$ 76,152</span>
                     </div>
                 </div>
             </div>
