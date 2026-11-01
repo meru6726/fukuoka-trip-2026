@@ -4,7 +4,7 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 秋·福岡與九州溫泉雙人慢遊與美學地圖</title>
+    <title>2026 秋·福岡與九州溫泉雙人浪漫慢遊</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: 質感日系字體 -->
@@ -12,13 +12,14 @@ HTML
     <style>
         body {
             font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f8fafc;
+            background-color: #fcf8f6;
             color: #334155;
         }
         .tab-btn.active {
-            background-color: #0d9488;
+            background-color: #e11d48;
             color: #ffffff;
             font-weight: 500;
+            box-shadow: 0 2px 4px rgba(225, 29, 72, 0.2);
         }
     </style>
 </head>
@@ -26,19 +27,19 @@ HTML
     <div class="max-w-4xl mx-auto">
         <!-- 頁面標題 -->
         <header class="text-center mb-8">
-            <span class="inline-block bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full font-medium mb-3">2026.11.03 – 11.10 (8 days)</span>
+            <span class="inline-block bg-rose-100 text-rose-700 text-xs px-3.5 py-1 rounded-full font-medium mb-3 tracking-wide">🍂 2026.11.03 – 11.10 (8 Days Slow Travel)</span>
             <h1 class="text-3xl sm:text-4xl font-light tracking-wide text-slate-800 mb-2">福岡與九州溫泉浪漫慢遊</h1>
-            <p class="text-slate-500 text-sm">當代藝術 × 高千穗秘境 × 溫泉慢活 × 頂級美食 × 黑膠爵士夜</p>
+            <p class="text-slate-500 text-sm">當代美學 × 高千穗秘境 × 湯布院別府雙溫泉 × 黑膠爵士夜</p>
         </header>
 
         <!-- 頁籤切換按鈕 (Tab Buttons) -->
         <div class="flex justify-center mb-8">
-            <div class="bg-slate-200 p-1 rounded-xl flex space-x-1 shadow-inner text-sm">
-                <button id="btn-itinerary" onclick="switchTab('itinerary')" class="tab-btn active px-6 py-2 rounded-lg transition-all">
-                    🗺️ 每日詳細行程 (Day 1 - 8)
+            <div class="bg-white p-1.5 rounded-2xl flex space-x-1 shadow-sm border border-rose-100 text-sm">
+                <button id="btn-itinerary" onclick="switchTab('itinerary')" class="tab-btn active px-6 py-2.5 rounded-xl transition-all">
+                    🗺️ 每日浪漫行程 (Day 1 - 8)
                 </button>
-                <button id="btn-budget" onclick="switchTab('budget')" class="tab-btn px-6 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition-all">
-                    💰 預算與備忘記帳
+                <button id="btn-budget" onclick="switchTab('budget')" class="tab-btn px-6 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 transition-all">
+                    💳 預算與飯店備忘
                 </button>
             </div>
         </div>
@@ -47,140 +48,155 @@ HTML
         <div id="tab-itinerary" class="space-y-6">
             
             <!-- Day 1 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-rose-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 1 • 11/03 (二)</span>
-                        <h2 class="text-lg font-medium text-slate-800">抵達福岡 ➔ 飯店 Check-in ➔ 博多 Christmas Market</h2>
+                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">Day 1 • 11/03 (二)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">啟程直飛 ➔ 飯店 Check-in ➔ 博多聖誕市集</h2>
                     </div>
-                    <span class="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded">宿：Cross Life 博多柳橋</span>
+                    <span class="bg-rose-50 text-rose-700 text-xs px-3 py-1 rounded-lg font-medium">宿：Cross Life 博多柳橋</span>
                 </div>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>✈️ <strong>去程航班：</strong>中華航空 CI128 (14:15 桃園 T2 ➔ 17:30 抵達福岡國際線)</li>
-                    <li>🏨 <strong>入住 Check-in：</strong>Cross Life 博多柳橋（Cross Life Hakata Yanagibashi）</li>
-                    <li>🎄 <strong>傍晚亮點：</strong>前往博多站前或天神中央公園造訪熱鬧溫馨的福岡聖誕市集，感受浪漫點燈與熱紅酒氛圍。</li>
+                <ul class="text-sm text-slate-600 space-y-2.5">
+                    <li class="flex items-start">
+                        <span class="bg-rose-100 text-rose-800 text-xs px-2 py-0.5 rounded font-medium mr-2 mt-0.5">航班</span>
+                        <span>中華航空 <strong>CI128</strong> (14:15 桃園 T2 ➔ 17:30 福岡國際線抵達)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-medium mr-2 mt-0.5">住宿</span>
+                        <span>入住 Cross Life 博多柳橋，享受現代極簡美學風格。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded font-medium mr-2 mt-0.5">晚間</span>
+                        <span>前往博多站前或天神地區造訪熱鬧浪漫的<strong>福岡 Christmas Market</strong>，感受冬日燈飾與熱紅酒氛圍。</span>
+                    </li>
                 </ul>
             </div>
 
             <!-- Day 2 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-amber-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 2 • 11/04 (三)</span>
-                        <h2 class="text-lg font-medium text-slate-800">太宰府散策 ➔ 天神魚忠午餐 ➔ 傍晚鋼彈 ➔ 赤坂爵士夜</h2>
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Day 2 • 11/04 (三)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">太宰府文化散策 ➔ 魚忠海鮮丼 ➔ 傍晚鋼彈 ➔ 赤坂爵士夜</h2>
                     </div>
-                    <span class="bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded">宿：Cross Life 博多柳橋</span>
+                    <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-lg font-medium">宿：Cross Life 博多柳橋</span>
                 </div>
                 <div class="space-y-3 text-sm text-slate-600">
-                    <p>⛩️ <strong>09:00 - 11:30：</strong>西鐵前往太宰府天滿宮參拜，欣賞隈研吾星巴克與現烤梅枝餅。</p>
-                    <p>🐟 <strong>12:00 - 13:30：</strong>返回天神，前往今泉享用高級料亭監修的 <a href="https://maps.app.goo.gl/rEHLewLtJPmuZwvj9" target="_blank" class="text-teal-600 underline font-medium">田中田式海鮮食堂 魚忠</a> 豪華午餐。</p>
-                    <p>🤖 <strong>15:00 - 17:30：</strong>搭乘直達公車前往 <a href="https://maps.app.goo.gl/EdlnmueRQTURANHk" target="_blank" class="text-teal-600 underline font-medium">LaLaport 福岡</a>，戶外廣場朝聖 1:1 巨型動態鋼彈變形與點燈秀。</p>
-                    <p>🎷 <strong>20:00 之後：</strong>直奔赤坂優雅街區，沉浸於 <strong>Jazz & Cafe Backstage</strong> 頂級黑膠樂與微醺調酒中。</p>
+                    <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100/80">
+                        <span class="font-bold text-amber-800">⛩️ 上午：</span>西鐵前往太宰府天滿宮參拜，欣賞隈研吾風格星巴克與現烤梅枝餅。
+                    </div>
+                    <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100/80">
+                        <span class="font-bold text-emerald-800">🐟 午餐：</span>返回天神今泉，享用高級料亭監修的 <a href="https://maps.app.goo.gl/rEHLewLtJPmuZwvj9" target="_blank" class="text-emerald-700 underline font-bold">田中田式海鮮食堂 魚忠</a> 豪華海鮮丼與定食。
+                    </div>
+                    <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100/80">
+                        <span class="font-bold text-blue-800">🤖 傍晚：</span>直達公車至 <a href="https://maps.app.goo.gl/EdlnmueRQTURANHk" target="_blank" class="text-blue-700 underline font-bold">LaLaport 福岡</a>，戶外廣場朝聖 1:1 巨型動態鋼彈燈光秀。
+                    </div>
+                    <div class="bg-purple-50/50 p-3 rounded-xl border border-purple-100/80">
+                        <span class="font-bold text-purple-800">🎷 爵士夜：</span>直奔赤坂優雅街區，沉浸於 <strong>Jazz & Cafe Backstage</strong> 頂級黑膠樂與微醺調酒中。
+                    </div>
                 </div>
             </div>
 
             <!-- Day 3 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-emerald-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 3 • 11/05 (四)</span>
-                        <h2 class="text-lg font-medium text-slate-800">行李寄送 ➔ 前往由布院溫泉鄉慢遊</h2>
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Day 3 • 11/05 (四)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">行李寄送 ➔ 前往由布院溫泉鄉慢遊</h2>
                     </div>
-                    <span class="bg-amber-50 text-amber-700 text-xs px-2.5 py-1 rounded">宿：由布院 旅莊 Okaeri</span>
+                    <span class="bg-emerald-50 text-emerald-700 text-xs px-3 py-1 rounded-lg font-medium">宿：由布院 旅莊 Okaeri</span>
                 </div>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>🧳 <strong>行李寄送：</strong>辦理大行李箱寄送（Luggage Forwarding）直達 11/7 Via Inn 飯店，輕裝前往溫泉區。</li>
+                    <li>🧳 <strong>行李物流：</strong>辦理大行李箱寄送（Luggage Forwarding）直達 11/7 Via Inn 飯店，僅隨身輕裝往溫泉區。</li>
                     <li>♨️ <strong>由布院慢活：</strong>漫步湯之坪街道、金鱗湖湖畔美景。</li>
-                    <li>🍲 <strong>午餐彈性口袋：</strong>由布院 釜飯心 或 鞠智 Cucchi 定食/甜點。</li>
+                    <li>🍲 <strong>午餐彈性清單：</strong>由布院 釜飯心（豐後牛/地雞釜飯）或 鞠智 Cucchi 定食與甜點。</li>
                 </ul>
             </div>
 
             <!-- Day 4 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-sky-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 4 • 11/06 (五)</span>
-                        <h2 class="text-lg font-medium text-slate-800">由布院晨霧 ➔ 前往別府溫泉</h2>
+                        <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Day 4 • 11/06 (五)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">金鱗湖晨霧 ➔ 移動前往別府溫泉</h2>
                     </div>
-                    <span class="bg-sky-50 text-sky-700 text-xs px-2.5 py-1 rounded">宿：AMANEK Beppu YURA-RE</span>
+                    <span class="bg-sky-50 text-sky-700 text-xs px-3 py-1 rounded-lg font-medium">宿：AMANEK Beppu YURA-RE</span>
                 </div>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>🌫️ <strong>清晨：</strong>欣賞夢幻的金鱗湖晨霧景象。</li>
-                    <li>♨️ <strong>別府午餐與體驗：</strong>彈性選擇「地獄蒸工房 鐵輪」天然溫泉蒸氣料理，或元祖炸雞天婦羅「東洋軒」。</li>
-                    <li>🏨 <strong>入住體驗：</strong>入住 AMANEK Beppu YURA-RE 享用頂樓無邊際溫泉足湯與質感設施。</li>
+                    <li>🌫️ <strong>清晨：</strong>欣賞夢幻的金鱗湖晨霧與山景。</li>
+                    <li>♨️ <strong>別府午餐與體驗：</strong>彈性選擇「地獄蒸工房 鐵輪」天然溫泉蒸氣料理，或大分元祖炸雞天婦羅「東洋軒」。</li>
+                    <li>🏨 <strong>飯店設施：</strong>入住 AMANEK Beppu YURA-RE，享用頂樓無邊際溫泉足湯與奢華浴衣選用。</li>
                 </ul>
             </div>
 
             <!-- Day 5 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-indigo-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 5 • 11/07 (六)</span>
-                        <h2 class="text-lg font-medium text-slate-800">別府地獄巡禮 ➔ 返回博多市區 Check-in</h2>
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Day 5 • 11/07 (六)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">別府地獄巡禮 ➔ 返回博多市區 Check-in</h2>
                     </div>
-                    <span class="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded">宿：Via Inn 博多口站前</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-lg font-medium">宿：Via Inn 博多口站前</span>
                 </div>
                 <ul class="text-sm text-slate-600 space-y-2">
                     <li>🌋 <strong>上午：</strong>參觀海地獄、灶地獄等天然奇景。</li>
-                    <li>🚆 <strong>下午：</strong>搭乘 JR 特急音速號（Sonic）輕鬆返回博多市區，於 Via Inn 順利取回寄送的行李。</li>
+                    <li>🚆 <strong>下午：</strong>搭乘 JR 特急音速號（Sonic）輕鬆返回博多，於 Via Inn 順利取回預先寄送的行李。</li>
                 </ul>
             </div>
 
-            <!-- Day 6 (KKday 高千穗峽一日遊與集合提醒) -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <!-- Day 6 -->
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-teal-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Day 6 • 11/08 (日)</span>
-                        <h2 class="text-lg font-medium text-slate-800">KKday 高千穗峽秘境一日遊</h2>
+                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 6 • 11/08 (日)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">KKday 高千穗峽秘境一日遊</h2>
                     </div>
-                    <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded">宿：Via Inn 博多口站前</span>
+                    <span class="bg-teal-50 text-teal-700 text-xs px-3 py-1 rounded-lg font-medium">宿：Via Inn 博多口站前</span>
                 </div>
                 <div class="space-y-3 text-sm text-slate-600">
-                    <div class="bg-emerald-50/60 p-3.5 rounded-xl border border-emerald-100">
-                        <p class="font-medium text-emerald-900 mb-1">📍 集合地點與時間提醒：</p>
-                        <p class="text-xs text-emerald-800"><strong>博多站築紫口（筑紫口）</strong> 羅森超商（LAWSON Oriental Hotel 店）前。請於 <strong>07:45 前報到抵達</strong>，專車將於 08:00 準時發車，逾時不候。</p>
+                    <div class="bg-teal-50/70 p-3.5 rounded-xl border border-teal-100 text-xs text-teal-900">
+                        <p class="font-bold text-sm text-teal-950 mb-1">📍 集合地點與時間：</p>
+                        <p><strong>博多站築紫口（筑紫口）</strong> 羅森超商（LAWSON Oriental Hotel 店）前。<br>請於 <strong>07:45 前報到抵達</strong>，專車 08:00 準時出發，逾時不候。</p>
                     </div>
-                    <p>🌊 <strong>景點亮點：</strong>欣賞火山熔岩地形形成的真名井瀑布、高千穗峽谷划船體驗、造訪神秘神聖的「天安河原」與高千穗神社參拜。</p>
-                    <p>🌆 <strong>傍晚：</strong>搭乘專車返抵博多站，晚餐可自由品嚐博多拉麵或居酒屋料理。</p>
+                    <p>🌊 <strong>景點亮點：</strong>火山熔岩真名井瀑布、高千穗峽谷划船體驗、造訪神秘神聖的「天安河原」與高千穗神社參拜。</p>
+                    <p>🌆 <strong>晚間：</strong>專車返抵博多站，晚餐可自由品嚐博多拉麵或屋台居酒屋。
                 </div>
             </div>
 
             <!-- Day 7 -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-orange-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Day 7 • 11/09 (一)</span>
-                        <h2 class="text-lg font-medium text-slate-800">大濠晨光美學 ➔ 市區採買 ➔ 農夫蔬菜吃到飽晚餐</h2>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Day 7 • 11/09 (一)</span>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">大濠晨光美學 ➔ 市區採買 ➔ 農夫蔬菜吃到飽晚餐</h2>
                     </div>
-                    <span class="bg-amber-50 text-amber-700 text-xs px-2.5 py-1 rounded">宿：Via Inn 博多口站前</span>
+                    <span class="bg-orange-50 text-orange-700 text-xs px-3 py-1 rounded-lg font-medium">宿：Via Inn 博多口站前</span>
                 </div>
                 <div class="space-y-3 text-sm text-slate-600">
-                    <p>🌅 <strong>09:00 - 11:30：</strong>漫步大濠公園湖畔，造訪前川國男設計的福岡市美術館與湖畔咖啡廳。</p>
-                    <p>🛍️ <strong>12:00 - 17:00：</strong>天神與博多商圈（如六本松蔦屋書店、天神地下街）悠閒採買與選物。</p>
-                    <p>🥗 <strong>18:00 晚餐：</strong>前往博多站東口附近的 <a href="https://maps.app.goo.gl/H2GUTc-RQTU" target="_blank" class="text-teal-600 underline font-medium">ファーマーズレストランはなや (Farmer's Restaurant Hanaya)</a>，享用在地小農直送、溫潤健康的原型有機<strong>蔬菜/野菜吃到飽 (Buffet/放題)</strong> 手作晚餐！</p>
+                    <p>🌅 <strong>09:00 - 11:30：</strong>大濠公園湖畔晨光散步，參觀前川國男設計的福岡市美術館與湖畔 Cafe。</p>
+                    <p>🛍️ <strong>12:00 - 17:00：</strong>天神與博多商圈（如六本松蔦屋書店、選物店）悠閒採買購物。</p>
+                    <p>🥗 <strong>18:00 晚餐：</strong>前往博多站東口 <a href="https://maps.app.goo.gl/H2GUTc-RQTU" target="_blank" class="text-orange-700 underline font-bold">ファーマーズレストランはなや (Farmer's Restaurant Hanaya)</a>，享用在地小農直送、溫潤健康的有機<strong>蔬菜/野菜放題吃到飽</strong>晚餐！</p>
                 </div>
             </div>
 
-            <!-- Day 8 (返台與機場各項提醒) -->
-            <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
+            <!-- Day 8 -->
+            <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-rose-600 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
                         <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Day 8 • 11/10 (二)</span>
-                        <h2 class="text-lg font-medium text-slate-800">退房 ➔ 機場最後購物 ➔ 回程返台</h2>
+                        <h2 class="text-xl font-medium text-slate-800 mt-0.5">退房 ➔ 機場最後購物 ➔ 回程返台</h2>
                     </div>
-                    <span class="bg-rose-50 text-rose-700 text-xs px-2.5 py-1 rounded">溫暖賦歸</span>
+                    <span class="bg-rose-50 text-rose-700 text-xs px-3 py-1 rounded-lg font-medium">溫暖賦歸</span>
                 </div>
-                
                 <div class="space-y-3 text-sm text-slate-600">
-                    <div class="bg-rose-50/60 p-3.5 rounded-xl border border-rose-100 space-y-2 text-xs text-rose-900">
-                        <p class="font-medium text-sm text-rose-950 mb-1">✈️ 福岡機場離境與退稅重點提醒：</p>
-                        <p><strong>1. 交通選擇：</strong>博多站搭乘市營地下鐵至「福岡空港站」（僅 5 分鐘），出站後需轉乘<strong>免費國際線接駁巴士</strong>（車程約 10-15 分鐘），建議多預留 20 分鐘接駁時間。</p>
-                        <p><strong>2. 提早報到：</strong>福岡機場國際線安檢與出境人潮較多，務必於起飛前 <strong>2.5 至 3 小時抵達櫃檯</strong>辦理 Check-in。</p>
-                        <p><strong>3. 伴手禮購物：</strong>國內線航廈伴手禮店種類最齊全；若時間充裕可先在國內線買齊（液體類需託運），再搭接駁車前往國際線搭機。</p>
-                        <p><strong>4. 免稅電子退稅：</strong>日本已全面實行電子退稅，消費時刷護照即可完成，出境時直接走海關護照查驗通道，免張貼紙本收據。</p>
+                    <div class="bg-rose-50/70 p-3.5 rounded-xl border border-rose-100 space-y-2 text-xs text-rose-900">
+                        <p class="font-bold text-sm text-rose-950 mb-1">✈️ 福岡機場離境與購物提醒：</p>
+                        <p><strong>1. 交通接駁：</strong>地鐵博多站搭至「福岡空港站」，出站轉乘<strong>免費國際線接駁巴士</strong>（約 10-15 分鐘），建議預留接駁時間。</p>
+                        <p><strong>2. 提早報到：</strong>國際線安檢與出境人潮眾多，務必於起飛前 <strong>2.5 至 3 小時抵達櫃檯</strong> Check-in。</p>
+                        <p><strong>3. 伴手禮購物：</strong>國內線航廈伴手禮種類最齊全；時間充裕可先在國內線買齊（液體需託運）再搭接駁車往國際線。</p>
+                        <p><strong>4. 電子退稅：</strong>日本已全面實行電子退稅，消費時刷護照完成，出境走海關通道，免張貼紙本收據。</p>
                     </div>
-
-                    <p>🛍️ <strong>最後巡禮：</strong>從容辦理登機手續、國際線免稅店最後採買，帶著豐富的回憶搭機返台！</p>
+                    <p>🛍️ <strong>最後巡禮：</strong>從容辦理手續、國際線免稅店最後採買，帶著滿滿溫暖的回憶返台！</p>
                 </div>
             </div>
 
@@ -189,46 +205,58 @@ HTML
         <!-- ==================== 頁籤二：預算與備忘記帳 ==================== -->
         <div id="tab-budget" class="hidden space-y-6">
             <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
-                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">💰 兩人行前固定開支與記帳清單</h3>
+                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">💳 雙人行前固定開支與記帳</h3>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600 mb-6">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <div class="bg-rose-50/50 p-4 rounded-xl border border-rose-100">
                         <div class="flex justify-between items-center mb-1">
-                            <span class="font-medium text-slate-800">台灣大哥大漫遊</span>
-                            <span class="text-xs bg-teal-50 text-teal-700 px-2 py-0.5 rounded">通訊</span>
+                            <span class="font-bold text-slate-800">台灣大哥大漫遊</span>
+                            <span class="text-xs bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-medium">通訊</span>
                         </div>
-                        <p class="text-xs text-slate-500">NT$ 903 × 2 人 = <strong class="text-slate-700">NT$ 1,806</strong></p>
+                        <p class="text-xs text-slate-500">NT$ 903 × 2 人 = <strong class="text-slate-800 text-sm">NT$ 1,806</strong></p>
                     </div>
 
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100">
                         <div class="flex justify-between items-center mb-1">
-                            <span class="font-medium text-slate-800">旅遊不便險</span>
-                            <span class="text-xs bg-teal-50 text-teal-700 px-2 py-0.5 rounded">保險</span>
+                            <span class="font-bold text-slate-800">旅遊不便險</span>
+                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">保險</span>
                         </div>
-                        <p class="text-xs text-slate-500">NT$ 1,600 × 2 人 = <strong class="text-slate-700">NT$ 3,200</strong></p>
+                        <p class="text-xs text-slate-500">NT$ 1,600 × 2 人 = <strong class="text-slate-800 text-sm">NT$ 3,200</strong></p>
                     </div>
                 </div>
 
-                <div class="bg-teal-50 p-4 rounded-xl border border-teal-100 text-teal-900 flex justify-between items-center text-sm font-medium">
+                <div class="bg-rose-500 text-white p-4 rounded-xl shadow-sm flex justify-between items-center text-sm font-medium">
                     <span>固定開支兩人總計 (漫遊 + 保險)：</span>
-                    <span class="text-base text-teal-700 font-bold">NT$ 5,006</span>
+                    <span class="text-xl font-bold">NT$ 5,006</span>
                 </div>
             </div>
 
             <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
                 <h3 class="text-lg font-medium text-slate-800 mb-3 pb-2 border-b border-slate-100">🏨 住宿預訂一覽</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• 11/03 - 11/05 (2晚)：Cross Life 博多柳橋</li>
-                    <li>• 11/05 - 11/06 (1晚)：由布院 旅莊 Okaeri (Yufurin Ryokan Okaeri)</li>
-                    <li>• 11/06 - 11/07 (1晚)：別府 AMANEK Beppu YURA-RE</li>
-                    <li>• 11/07 - 11/10 (3晚)：Via Inn 博多口站前</li>
+                <ul class="text-sm text-slate-600 space-y-2.5">
+                    <li class="flex justify-between border-b border-slate-50 pb-2">
+                        <span>11/03 - 11/05 (2晚)</span>
+                        <strong class="text-slate-800">Cross Life 博多柳橋</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2">
+                        <span>11/05 - 11/06 (1晚)</span>
+                        <strong class="text-slate-800">由布院 旅莊 Okaeri</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2">
+                        <span>11/06 - 11/07 (1晚)</span>
+                        <strong class="text-slate-800">別府 AMANEK Beppu YURA-RE</strong>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>11/07 - 11/10 (3晚)</span>
+                        <strong class="text-slate-800">Via Inn 博多口站前</strong>
+                    </li>
                 </ul>
             </div>
         </div>
 
         <!-- 頁尾備忘 -->
         <footer class="text-center text-xs text-slate-400 py-6 mt-6">
-            <p>© 2026 Fukuoka Romantic Slow Travel. All details fully synchronized.</p>
+            <p>© 2026 Fukuoka Romantic Slow Travel. Vibrant & Elegant Design.</p>
         </footer>
     </div>
 
@@ -249,7 +277,7 @@ HTML
                 itinTab.classList.add('hidden');
                 budgetTab.classList.remove('hidden');
                 btnItin.classList.remove('active');
-                btnBudget.classList.active('active');
+                btnBudget.classList.add('active');
             }
         }
     </script>
