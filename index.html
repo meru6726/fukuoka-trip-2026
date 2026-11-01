@@ -47,7 +47,7 @@ HTML
         <!-- ==================== 頁籤一：每日詳細行程 ==================== -->
         <div id="tab-itinerary" class="space-y-6">
             
-            <!-- Day 1 (已加入 teamLab 福岡城跡光之祭) -->
+            <!-- Day 1 -->
             <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-rose-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
@@ -126,7 +126,7 @@ HTML
                 </ul>
             </div>
 
-            <!-- Day 5 (已加入別府回博多 + JR Pass 與博多耶誕市集) -->
+            <!-- Day 5 -->
             <div class="bg-white shadow-sm rounded-2xl p-6 border-l-4 border-l-indigo-500 border-y border-r border-slate-100">
                 <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
                     <div>
@@ -204,50 +204,51 @@ HTML
         <!-- ==================== 頁籤二：預算、票券與住宿記帳 ==================== -->
         <div id="tab-budget" class="hidden space-y-6">
             <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
-                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">💳 雙人行前固定開支與記帳</h3>
+                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">💳 雙人主要花費與記帳總覽</h3>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600 mb-6">
                     <div class="bg-rose-50/50 p-4 rounded-xl border border-rose-100">
                         <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold text-slate-800">台灣大哥大漫遊</span>
-                            <span class="text-xs bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-medium">通訊</span>
+                            <span class="font-bold text-slate-800">華航雙人機票</span>
+                            <span class="text-xs bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-medium">機票</span>
                         </div>
-                        <p class="text-xs text-slate-500">NT$ 903 × 2 人 = <strong class="text-slate-800 text-sm">NT$ 1,806</strong></p>
+                        <p class="text-xs text-slate-500">NT$ 15,000 × 2 人 = <strong class="text-slate-800 text-sm">NT$ 30,000</strong></p>
+                    </div>
+
+                    <div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-slate-800">7 晚旅宿總費用</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-medium">住宿</span>
+                        </div>
+                        <p class="text-xs text-slate-500">四間質感旅宿合計 = <strong class="text-slate-800 text-sm">NT$ 33,338</strong></p>
                     </div>
 
                     <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100">
                         <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold text-slate-800">旅遊不便險</span>
-                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">保險</span>
+                            <span class="font-bold text-slate-800">漫遊 + 不便險</span>
+                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">行前</span>
                         </div>
-                        <p class="text-xs text-slate-500">NT$ 1,600 × 2 人 = <strong class="text-slate-800 text-sm">NT$ 3,200</strong></p>
+                        <p class="text-xs text-slate-500">漫遊 $1,806 + 保險 $3,200 = <strong class="text-slate-800 text-sm">NT$ 5,006</strong></p>
                     </div>
                 </div>
 
                 <div class="bg-rose-500 text-white p-4 rounded-xl shadow-sm flex justify-between items-center text-sm font-medium">
-                    <span>固定開支兩人總計 (漫遊 + 保險)：</span>
-                    <span class="text-xl font-bold">NT$ 5,006</span>
+                    <span>主要花費總計 (機票 + 住宿 + 固定開支)：</span>
+                    <span class="text-xl font-bold">NT$ 68,344</span>
                 </div>
             </div>
 
-            <!-- 機票與住宿明細 -->
+            <!-- 住宿明細 -->
             <div class="bg-white shadow-sm rounded-2xl p-6 border border-slate-100">
-                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">✈️ 機票與 🏨 住宿價格/預訂明細</h3>
+                <h3 class="text-lg font-medium text-slate-800 mb-4 pb-2 border-b border-slate-100">🏨 住宿預訂明細</h3>
                 <ul class="text-sm text-slate-600 space-y-3">
                     <li class="flex justify-between items-center border-b border-slate-50 pb-2">
-                        <div>
-                            <strong class="text-slate-800">中華航空 CI128 (經濟艙，雙人)</strong>
-                            <p class="text-xs text-slate-400">11/03 台北 T2 ➔ 11/10 福岡</p>
-                        </div>
-                        <span class="text-rose-600 font-bold">（依實際出票為主）</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b border-slate-50 pb-2">
                         <span>11/03 - 11/05 (2晚) ｜ <strong>Cross Life 博多柳橋</strong></span>
-                        <span class="text-slate-800 font-medium">雙人舒適房型</span>
+                        <span class="text-slate-800 font-medium">雙人極美極簡房</span>
                     </li>
                     <li class="flex justify-between items-center border-b border-slate-50 pb-2">
                         <span>11/05 - 11/06 (1晚) ｜ <strong>由布院 旅莊 Okaeri</strong></span>
-                        <span class="text-slate-800 font-medium">溫泉鄉一泊二食/素泊</span>
+                        <span class="text-slate-800 font-medium">溫泉鄉慢活旅宿</span>
                     </li>
                     <li class="flex justify-between items-center border-b border-slate-50 pb-2">
                         <span>11/06 - 11/07 (1晚) ｜ <strong>別府 AMANEK Beppu YURA-RE</strong></span>
@@ -263,7 +264,7 @@ HTML
 
         <!-- 頁尾備忘 -->
         <footer class="text-center text-xs text-slate-400 py-6 mt-6">
-            <p>© 2026 Fukuoka Romantic Slow Travel. teamLab & Christmas Market Edition.</p>
+            <p>© 2026 Fukuoka Romantic Slow Travel. Final Budget & Itinerary Synchronized.</p>
         </footer>
     </div>
 
